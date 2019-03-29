@@ -1,0 +1,40 @@
+body {
+	background-color:black;
+	font-family: 'Share Tech Mono', monospace;
+	text-align: center;
+	line-height: 1.5;
+}
+
+h1, h2 {
+	color: #00ff00;
+}
+
+a, p {
+	font-size: 1.5em;
+	color: #00ff00;
+}
+
+a {
+	color: green;
+}
+
+p a {
+	font-size: 1em;
+}
+
+#important-note {
+	font-weight: bolder;
+}
+#back-button {
+	font-size: 0.75em;
+	text-align: left;
+}
+@media (max-width: 768px) {
+	body {
+		font-size: 0.8em;
+	}
+	
+	a, p {
+		font-size: 3vw;
+	}
+}
