@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8">
+		<title>JDBC Security</title>
+		<link rel="stylesheet" th:href="@{css/styles.css}" />
+		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"/> 
+	</head>
+
+	<body>
+		<h1>Welcome to this glorious project!</h1>
+		<form method="POST" th:action="@{/logout}">
+			<input class="submit" type="submit" value="Logout">
+		</form>
+	</body>
+</html> 

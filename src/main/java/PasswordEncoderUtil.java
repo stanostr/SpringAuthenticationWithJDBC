@@ -1,7 +1,3 @@
-import static org.hamcrest.CoreMatchers.containsString;
-
-import java.util.Scanner;
-
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 public class PasswordEncoderUtil {
@@ -11,6 +7,5 @@ public class PasswordEncoderUtil {
 	  System.out.println(encoder.encode(input));
 	  String input2 = "stan";
 	  System.out.println(encoder.encode(input2));
-
   }
 }

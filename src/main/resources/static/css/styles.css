@@ -5,8 +5,16 @@ body {
 	line-height: 1.5;
 }
 
-h1, h2 {
+h1, h2, label {
 	color: #00ff00;
+}
+
+.submit {
+	background-color: transparent;
+	color: #00ff00;
+	font-size: 1.5em;
+	font-family: 'Share Tech Mono', monospace;
+	margin-top: 10px;
 }
 
 a, p {
@@ -22,13 +30,6 @@ p a {
 	font-size: 1em;
 }
 
-#important-note {
-	font-weight: bolder;
-}
-#back-button {
-	font-size: 0.75em;
-	text-align: left;
-}
 @media (max-width: 768px) {
 	body {
 		font-size: 0.8em;
