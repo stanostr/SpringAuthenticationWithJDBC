@@ -15,6 +15,9 @@ import com.stanostr.springjdbc.data.User;
 import com.stanostr.springjdbc.data.UserRepository;
 import com.stanostr.springjdbc.security.RegistrationForm;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Controller
 @RequestMapping("/register")
 public class RegistrationController {
@@ -38,7 +41,13 @@ public class RegistrationController {
 		{
 			return "register";
 		}
-		repo.save(registrationForm.toUser(new BCryptPasswordEncoder()));
+		User user = registrationForm.toUser(new BCryptPasswordEncoder());
+		if(repo.userExists(user))
+		{
+			log.info("User already exists");
+			return "register";
+		}
+		repo.save(user);
 		return "redirect:/login";
 	}
 }

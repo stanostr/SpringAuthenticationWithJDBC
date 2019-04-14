@@ -21,5 +21,12 @@ public class JdbcUserRepository implements UserRepository {
 		jdbc.update("insert into UserAuthorities(username, authority) values (?, ?)", user.getUsername(), "USER");
 		return user;
 	}
+	
+	@Override
+	public boolean userExists(User user)
+	{
+		int total =  jdbc.queryForObject("select count(*) from Users where username = ?", Integer.class, user.getUsername());
+		return total != 0;
+	}
 
 }
