@@ -8,11 +8,31 @@
 </head>
 <body>
 	<h1>Register</h1>
-	<form method="POST">
-		
+	<form method="POST" th:object="${registrationForm}">
+		<label for="firstname">First Name: </label>
+		<input type="text" name="firstname"/>
+		<span class="validation" th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}">First Name error</span><br/>
 
+		<label for="lastname">Last Name: </label>
+		<input type="text" name="lastname"/>
+		<span class="validation" th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}">Last Name error</span><br/>
+
+		<label for="username">Username: </label>
+		<input type="text" name="username"/>
+		<span class="validation" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username error</span><br/>
+
+		<label for="password">Enter password: </label>
+		<input type="password" name="password"/>
+		<span class="validation" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password error</span><br/>
+
+		<label for="confirm">Confirm Password: </label>
+		<input type="password" name="confirm"/>
+		<span class="validation" th:if="${#fields.hasErrors('confirm')}" th:errors="*{confirm}">Confirmation error</span><br/>
+
+		<input type="submit" value="Register" class="submit"/>
 	</form>
 
 	<br/><p>Already registered? Click <a th:href="@{login}">here</a> to sign in</p>
+		}
 </body>
 </html>

@@ -9,12 +9,17 @@ h1, h2, label {
 	color: #00ff00;
 }
 
-.submit {
+.submit, input {
 	background-color: transparent;
 	color: #00ff00;
-	font-size: 1.5em;
+	font-size: 1.1em;
 	font-family: 'Share Tech Mono', monospace;
 	margin-top: 10px;
+}
+
+.validation {
+	color: #ff0000;
+	font-family: 'Share Tech Mono', monospace;
 }
 
 a, p {
