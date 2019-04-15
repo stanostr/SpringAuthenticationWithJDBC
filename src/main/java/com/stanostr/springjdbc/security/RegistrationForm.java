@@ -11,6 +11,7 @@ import com.stanostr.springjdbc.data.User;
 import lombok.Data;
 
 @Data
+@FieldMatch(message = "Passwords are not equal.")
 public class RegistrationForm {
 	@NotBlank(message="Field cannot be left blank")
 	private String firstname;
@@ -22,12 +23,6 @@ public class RegistrationForm {
 	private String password;
 	@Size(min=6, max=20, message="Password must be between 6 and 20 characters in length")
 	private String confirm;
-	
-	@AssertTrue(message="Passwords do not match")
-	public boolean getPassMatch()
-	{
-		return confirm.equals(password);
-	}
 	
 	public User toUser(PasswordEncoder passwordEncoder)
 	{
