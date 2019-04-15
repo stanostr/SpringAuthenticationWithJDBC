@@ -10,6 +10,8 @@
 	<h1>Register</h1>
 	<div class="validation" th:text="${userexists}"></div>
 	<form method="POST" th:object="${registrationForm}">
+		<input type="hidden" name="_csrf" th:value="${_csrf.token}"/>
+
 		<label for="firstname">First Name: </label>
 		<input type="text" name="firstname"/>
 		<span class="validation" th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}">First Name error</span><br/>
