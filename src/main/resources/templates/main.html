@@ -9,7 +9,7 @@
 	</head>
 
 	<body>
-		<h1>Welcome to this glorious project!</h1>
+		<h1>Welcome to this glorious project, <span th:text="${firstname}">user</span>!</h1>
 		<form method="POST" th:action="@{/logout}">
 			<input class="submit" type="submit" value="Logout">
 		</form>
